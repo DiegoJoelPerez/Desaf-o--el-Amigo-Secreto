@@ -1,0 +1,256 @@
+:root {
+    --color-primary: #4B69FD;
+    --color-secondary: #FFF9EB;
+    --color-tertiary: #C4C4C4;
+    --color-button: #e06868;
+    --color-button-hover: #f5c151;
+    --color-text: #444444;
+    --color-white: #FFFFFF;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+/* Banner */
+.header-banner {
+    flex: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 0;
+}
+
+/* Sección de entrada */
+.input-section {
+    flex: 60%;
+    background-color: var(--color-secondary);
+    border: 1px solid #000;
+    border-radius: 64px 64px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Títulos */
+.main-title {
+    font-size: 48px;
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-white);
+}
+
+.section-title {
+    font-family: "Inter", serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Contenedores de entrada y botón */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.input-name {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 25px 0 0 25px;
+    font-size: 16px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.input-name:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 5px var(--color-primary);
+}
+
+.input-name::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.button-container {
+    width: 300px;
+    justify-content: center;
+}
+
+/* Estilos de entrada de texto */
+.input-title {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #333;
+    border-right: none;
+    border-radius: 25px 0 0 25px;
+    font-family: "Merriweather", serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+/* boton de limpiar*/
+.limpiar-lista-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff6e7f, #b83f56); /* Gradiente original */
+    color: white;
+    padding: 12px 25px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.limpiar-lista-btn:hover {
+    background: linear-gradient(135deg, #ffa500, #ff8c00); /* Gradiente naranja al pasar el cursor */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.limpiar-lista-btn:active {
+    background: linear-gradient(135deg, #ff8c00, #ffa500); /* Gradiente naranja al hacer clic */
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.limpiar-lista-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 107, 129, 0.5);
+}
+
+.limpiar-lista-btn i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+
+
+/* Estilos de botón */
+button {
+    padding: 15px 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    gap: 15px
+}
+
+.button-add {
+    background-color: #ffb74d; /* Un naranja más suave */
+    color: var(--color-white);
+    border-radius: 0 25px 25px 0;
+    border: 2px solid #f57c00; /* Un naranja más oscuro para el borde */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.button-add:hover {
+    background-color: #ffa726; /* Un tono ligeramente más oscuro al hacer hover */
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+.button-add:focus {
+    outline: none;
+    box-shadow: 0 0 7px #f57c00;
+}
+
+
+/* Listas */
+ul {
+    list-style-type: none;
+    color: var(--color-text);
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.result-list {
+    margin-top: 15px;
+    color: #1305df;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Botón de sortear título */
+.button-draw {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 40px;
+    color: var(--color-white);
+    background-color: var(--color-button);
+    font-size: 16px;
+    
+}
+
+.button-draw img {
+    margin-right: 40px;
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+    
+    transform: translateY(-3px); /* Ligero movimiento hacia arriba */
+    box-shadow: 0 6px 12px rgba(233, 16, 16, 0.4);
+}
+
+/* Estilos para los elementos de la lista de amigos */
+#listaAmigos .amigo-item {
+    background-color: #fff8e1; 
+    color: #e65100; 
+    border: 1px solid #ffb300; 
+    padding: 10px 15px; 
+    margin-bottom: 8px; 
+    border-radius: 8px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+    text-align: left; 
+    font-weight: bold; 
+    font-size: 1.1em; 
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.result-list {
+    /* ... otros estilos ... */
+    animation: fadeIn 0.5s ease-out;
+}
